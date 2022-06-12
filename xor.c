@@ -1,7 +1,7 @@
 /*header files */
 #include <stdio.h>
 
-
+int i;
 /* INPUT a STRING and save it in a VARIABLE */
 int main() {                                                                                                                                                                            
   char stringinput[]; 
@@ -13,11 +13,17 @@ int main() {
   scanf("%d", repeatingkey);   
   fflush(stdout);
 /* XOR  every byte of INPUTTED STRING VARIABLE */
-
+char output;
+  for (i=0; i<strlen(stringinput); i++)
+  {
+    char temp = repeatingkey[i] ^ stringinput[i];
+    output[i] = temp;
+  }
 
 
 /* print the XORRED INPUTTED STRING VARIABLE */
-
+ output[i] = '\0';
+  printf("%s", output);
 
 
 /*give user an option D/E(Decrypt existing/Encrypt a new)
