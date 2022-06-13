@@ -7,10 +7,24 @@ int main()
 {
     while(1)
     {
+        while(hour==0)
+        {
+printf("Enter seconds: ");
+scanf("%d", &second);
+fflush(stdout);
+printf("Enter minute: ");
+scanf("%d", &minute);
+fflush(stdout);
+printf("Enter hour: ");
+scanf("%d", &hour);
+}
 while(second!=60)
 { 
-printf("Seconds %d", second);
-printf("\r");
+printf("\rSeconds %d", second);
+printf(" ");
+printf("Minute %d", minute);
+printf(" ");
+printf("Hour %d", hour);
 fflush(stdout);
 second++;
 sleep(1);
@@ -19,14 +33,10 @@ if (second == 60)
 {
     second = 1;
     minute++;
-    printf("Minute %d", minute);
-    printf("\r");
 }
 if (minute == 60)
 {
     hour++;
-    printf("%d", hour);
-    printf("\r");
 }
 }
 }
