@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <unistd.h>
-int minute;
-int second;
-int hour;
+unsigned short int minute;
+unsigned short int second;
+unsigned short int hour;
 int main()
 {
     while(1)
@@ -10,13 +10,13 @@ int main()
         while(hour==0)
         {
 printf("Enter seconds: ");
-scanf("%d", &second);
+scanf("%hu", &second);
 fflush(stdout);
 printf("Enter minute: ");
-scanf("%d", &minute);
+scanf("%hu", &minute);
 fflush(stdout);
 printf("Enter hour: ");
-scanf("%d", &hour);
+scanf("%hu", &hour);
 }
 while(second!=60)
 { 
