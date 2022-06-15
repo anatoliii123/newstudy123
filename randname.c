@@ -5,9 +5,10 @@ int main()
 {
     int i;
     int cast1;
+    int cast2;
     printf("Choose array length: ");
     scanf("%d", cast1);
-    char cast2 = atoi(cast1);
+    cast2 = atoi(cast1);
     char *parr1[cast2];
     for(i=0; i<cast1; i++)
     {
