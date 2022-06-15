@@ -7,17 +7,17 @@ int main()
     char cast1;
     int cast2;
     printf("Choose array length: ");
-    scanf("%c", cast1);
-    cast2 = atoi(cast1);
-    char *parr1[cast2];
+    scanf("%c", &cast1);
+    cast2 = atoi(&cast1);
+    char parr1[cast2];
     for(i=0; i<cast1; i++)
     {
         char tempchar;
         printf("Name to insert to array: ");
-        scanf("%s", tempchar);
-        *parr1[i] = tempchar;
+        scanf("%s", &tempchar);
+        parr1[i] = tempchar;
     }
-    int range = sizeof(*parr1) / sizeof(*parr1[0]);
+    int range = sizeof(parr1) / sizeof(parr1[0]);
     int tempint;
     int logic;
     char answer;
@@ -34,6 +34,6 @@ int main()
     while(answer=='y')
     {
         tempint = rand()%range;
-        printf("%c", *parr1[tempint]);
+        printf("%c", parr1[tempint]);
     }
 }
