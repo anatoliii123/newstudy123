@@ -5,7 +5,7 @@
 void add(float a, float b)
 {
 float tempfloat;
-tempfloat = a-b;
+tempfloat = a+b;
 std::cout<<a<<" + "<<b<<" = "<<tempfloat<<"\n";
 }
 
