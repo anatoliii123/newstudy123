@@ -4,7 +4,7 @@
 
 char *randstring(size_t length) {
 
-    static char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789,.-#'?!";        
+    static char charset[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";        
     char *randomString = NULL;
 
     if (length) {
@@ -25,15 +25,10 @@ char *randstring(size_t length) {
 
 int main()
 {
-    int tempint = 20;
+    int tempint = 10;
     char *newchar = randstring(tempint);
-    char private_key[20];
-    strcpy(newchar, private_key);
-    char check_for_privatekey[20];
-    char text_to_encrypt[20];
-
-
-    
+    char check_for_privatekey[11];
+    char *text_to_encrypt[20];
     printf("Enter text to encrypt: ");
     if (fgets(text_to_encrypt, 20, stdin) == NULL) {
         printf("Input error.\n");
@@ -42,7 +37,7 @@ int main()
     // START PROCCESS
     printf("Encrypting string->%s\n", text_to_encrypt);
     puts("This is where private_key is assigned");
-    printf("Your private key is:%s\n", private_key);
+    printf("Your private key is:%s\n", newchar);
     // "Encrypted with private key"
 
     while(1)
@@ -52,9 +47,9 @@ int main()
         printf("Input error.\n");
         exit(1);
     }
-    if (strncmp(check_for_privatekey, private_key, 10) == 0)
+    if (strncmp(check_for_privatekey, newchar, 10) == 0)
     {
-        printf("String decrypted\n ##%s", text_to_encrypt);
+        printf("String decrypted\n ##%s\n", text_to_encrypt);
     }
     else
     {
