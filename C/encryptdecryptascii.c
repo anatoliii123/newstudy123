@@ -17,20 +17,25 @@ int main()
     puts("This is where private_key is assigned");
     printf("Your private key is:%s\n", private_key);
     // "Encrypted with private key"
-    printf("Enter private key: ");
-     if (fgets(check_for_privatekey,20,stdin) == NULL) {
+
+    while(1)
+    {
+    printf("Enter private key: \n");
+     if (fgets(check_for_privatekey, 20, stdin) == NULL) {
         printf("Input error.\n");
         exit(1);
     }
-    if (strcmp(private_key, check_for_privatekey) == 0)
+    if (strncmp(check_for_privatekey, private_key, 3) == 0)
     {
-        printf("String decrypted\n %c", private_key);
+        printf("String decrypted\n ##%s", text_to_encrypt);
     }
     else
     {
-        printf("Invalid key");
+        printf("Invalid key\n");
     }
     
+    
+    }
     
     return 0;
 }
