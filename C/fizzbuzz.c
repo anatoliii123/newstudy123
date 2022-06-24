@@ -14,17 +14,17 @@ for(count=0; count<100; count++)
         printf("%d\n", count);
         if(!(count%divisible_num1))
         {
-            printf("%s\n", fizz_buzz[1]);
+            printf("%s\n", fizz_buzz[0]);
         }
         
         else if(!(count%divisible_num2))
         {
-            printf("%s\n", fizz_buzz[2]);
+            printf("%s\n", fizz_buzz[1]);
         }
         
         else if(!(count%divisible_num3))
         {
-            printf("%s\n", fizz_buzz[3]);
+            printf("%s\n", fizz_buzz[2]);
         }
     }
 
