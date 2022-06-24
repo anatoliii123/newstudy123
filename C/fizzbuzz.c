@@ -1,3 +1,6 @@
+/* AUTHOR ANATOLII123
+   6/24/2022 */
+
 #include <stdio.h>
 int count;
 char *fizz_buzz[20] = {"Fizz", "Buzz", "FizzBuzz"};
