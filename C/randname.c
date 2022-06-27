@@ -17,7 +17,7 @@ int main()
         scanf("%s", &tempchar);
         parr1[i] = tempchar;
     }
-    int range = sizeof(parr1) / sizeof(parr1[0]);
+    
     int tempint;
     int logic;
     char answer;
