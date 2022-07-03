@@ -6,7 +6,7 @@ int main()
 while (var<100)
 {
     var+=var1;
-    var1+= var;
+    var1+=var;
 printf("%d\n", var);
 }
 

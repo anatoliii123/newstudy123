@@ -32,6 +32,9 @@ printf("minutes = %d\n", minutes);
 
 int seconds = minutes*60;
 printf("seconds = %d\n", seconds);
+
+//simple feature
+puts("###############");
 }
 
 }
