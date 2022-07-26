@@ -1,7 +1,4 @@
-//
-//  BankAccount.h
-//  proofofconcept
-//
+
 //  Created by Amp on 8/9/13.
 //  Copyright (c) 2013 Amp. All rights reserved.
 //
@@ -35,18 +32,6 @@ public:
     void changeName(string name);
 };
 
-
-//
-//  BankAccount.cpp
-//  proofofconcept
-//
-//  Created by Amp on 8/9/13.
-//  Copyright (c) 2013 Amp. All rights reserved.
-//
-
-
-
-// Constructors
 
 BankAccount::BankAccount(int accountNum, string accountName, double accountBal){
     this->accountNum = accountNum;
