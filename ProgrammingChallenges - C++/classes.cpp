@@ -71,12 +71,18 @@ void BankAccount::changeName(string name){
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-    BankAccount *example = new BankAccount(12345, "Dark Helmet", 20.01);
-    cout << "The balance for " << example->getAccountName() << "'s account is $"
-        << example->getAccountBal() << ".\n";
-    example->changeName("Rick Moranis");
-    example->deposit(1000);
-    cout << "The balance for " << example->getAccountName() << "'s account is $"
-        << example->getAccountBal() << ".\n";
-    delete example;
+   BankAccount *example;
+   int tempint;
+   string tempstr2;
+   cout<<"Choose an option:\n"<<"1-Deposit\n2-Withdraw:\n";
+   cin>>tempint;
+   switch(tempint)
+   {
+       case 1:
+       int tempint1;
+       cout<<"How much would you like to deposit?: ";
+       cin>>tempint1;
+       example->deposit(tempint1);
+       cout<<"Your current balance is "<<example->getAccountBal()<<" Goodbye!";
+   }
 }
