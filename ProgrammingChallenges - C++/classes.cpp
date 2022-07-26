@@ -80,9 +80,13 @@ int main(int argc, const char * argv[]) {
    {
        case 1:
        int tempint1;
-       cout<<"How much would you like to deposit?: ";
-       cin>>tempint1;
-       example->deposit(tempint1);
+       cout<<"How much would you like to deposit?: \n";
+       getline(std::cin,tempint1);
+       cout<<tempint1;
+       (*example).deposit (tempint1);
+       {
+           cout<<"Deposit error";
+       }
        cout<<"Your current balance is "<<example->getAccountBal()<<" Goodbye!";
    }
 }
