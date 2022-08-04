@@ -2,6 +2,9 @@
 
 int main()
 {
+  int a, b;
+  int result;
+
 a = 5;
 b = 2;
 a = a + 1;
